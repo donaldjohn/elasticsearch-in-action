@@ -66,7 +66,7 @@
           }
         },
         "members" : { "type" : "text" },
-        "location_group" : { "type" : "text" }
+        "location_group" : { "type" : "text" } 
       }
     },
     "event" : {
@@ -83,7 +83,7 @@
           "type" : "text",
           "term_vector": "with_positions_offsets"
         },
-        "attendees" : { "type" : "text" },
+        "attendees" : { "type" : "keyword" },
         "date" : {
           "type" : "date",
           "format" : "date_hour_minute"
