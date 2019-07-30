@@ -167,3 +167,24 @@ curl "$URI?pretty" -d '
         }
     }
 }'
+
+
+curl 'localhost:9200/get-together/event/_search?pretty' -d '
+{
+    "aggregations":
+    {
+        "dates_breakdown":
+        { 
+                "date_range":
+                {
+                    "field":"date",
+                    "format":"YYYY.MM",
+                    "ranges":
+                    [
+                        {"to":"2013.07"},
+                        {"from":"2013.07"}
+                    ]
+                }k
+        }
+    }
+}'
